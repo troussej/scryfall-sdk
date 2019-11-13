@@ -2,7 +2,7 @@ import Axios, { AxiosResponse } from "axios";
 import MagicEmitter from "./MagicEmitter";
 
 // the path to the api
-const endpoint = "https://api.scryfall.com";
+const endpoint = process.env["SCRYFALL_URI"] || "https://api.scryfall.com";
 // the api requests 50-100 ms between calls, we go on the generous side and never wait less than 100 ms between calls
 const rateLimit = 100;
 
